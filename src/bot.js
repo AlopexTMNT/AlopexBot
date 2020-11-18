@@ -126,4 +126,16 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if (msg.content === 'kids') {
+    msg.reply('https://discord.com/channels/738094866965331969/738094866965331974/778712214495297536');
+  }
+});
+
+client.on('message', msg => {
+  if (msg.content === 'mutated') {
+    msg.reply('https://discord.com/channels/738094866965331969/738094866965331974/778712314575847425');
+  }
+});
+
 client.login(process.env.DISCORDJS_BOT_TOKEN);
