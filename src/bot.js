@@ -80,4 +80,10 @@ client.on('message', message => {
 
 });
 
+client.on('message', message => {
+  if (message.content === '$invite') {
+    message.channel.send('https://discord.com/oauth2/authorize?client_id=BOTS CLIENT ID&scope=bot')
+  }
+});
+
 client.login(process.env.DISCORDJS_BOT_TOKEN);
