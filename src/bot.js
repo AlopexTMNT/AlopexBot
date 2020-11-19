@@ -11,103 +11,20 @@ const webhookClient = new WebhookClient(
   process.env.WEBHOOK_TOKEN,
 );
 
-const PREFIX = "~";
+const PREFIX = "$";
 
 client.on('ready', () => {
   console.log(`${client.user.tag} has logged in.`);
 });
 
-client.on('message', async (message) => {
-  if (message.author.bot) return;
-  if (message.content.startsWith(PREFIX)) {
-    const [CMD_NAME, ...args] = message.content
-      .trim()
-      .substring(PREFIX.length)
-      .split(/\s+/);
-    if (CMD_NAME === 'kick') {
-      if (!message.member.hasPermission('KICK_MEMBERS'))
-        return message.reply('You do not have permissions to use that command');
-      if (args.length === 0)
-        return message.reply('Please provide an ID');
-      const member = message.guild.members.cache.get(args[0]);
-      if (member) {
-        member
-          .kick()
-          .then((member) => message.channel.send(`${member} was kicked.`))
-          .catch((err) => message.channel.send('I cannot kick that user :('));
-      } else {
-        message.channel.send('That member was not found');
-      }
-    } else if (CMD_NAME === 'ban') {
-      if (!message.member.hasPermission('BAN_MEMBERS'))
-        return message.reply("You do not have permissions to use that command");
-      if (args.length === 0) return message.reply("Please provide an ID");
-      try {
-        const user = await message.guild.members.ban(args[0]);
-        message.channel.send('User was banned successfully');
-      } catch (err) {
-        console.log(err);
-        message.channel.send('An error occured. Either I do not have permissions or the user was not found');
-      }
-    } else if (CMD_NAME === 'announce') {
-      console.log(args);
-      const msg = args.join(' ');
-      console.log(msg);
-      webhookClient.send(msg);
-    }
-  }
-});
-
-client.on('messageReactionAdd', (reaction, user) => {
-  const { name } = reaction.emoji;
-  const member = reaction.message.guild.members.cache.get(user.id);
-  if (reaction.message.id === '738666523408990258') {
-    switch (name) {
-      case '🍎':
-        member.roles.add('738664659103776818');
-        break;
-      case '🍌':
-        member.roles.add('738664632838782998');
-        break;
-      case '🍇':
-        member.roles.add('738664618511171634');
-        break;
-      case '🍑':
-        member.roles.add('738664590178779167');
-        break;
-    }
-  }
-});
-
-client.on('messageReactionRemove', (reaction, user) => {
-  const { name } = reaction.emoji;
-  const member = reaction.message.guild.members.cache.get(user.id);
-  if (reaction.message.id === '738666523408990258') {
-    switch (name) {
-      case '🍎':
-        member.roles.remove('738664659103776818');
-        break;
-      case '🍌':
-        member.roles.remove('738664632838782998');
-        break;
-      case '🍇':
-        member.roles.remove('738664618511171634');
-        break;
-      case '🍑':
-        member.roles.remove('738664590178779167');
-        break;
-    }
-  }
-});
-
 client.on('message', msg => {
-  if (msg.content === 'about') {
+if (msg.content === '$about') {
     msg.reply('I am just a random bot created by kostas456_YT#9842');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content === 'whoisalopex') {
+  if (msg.content === '$whoisalopex') {
     msg.reply('Alopex is a Mutant Red Fox and she apeared in TMNT 2012 TV Series. Sister of Tiger Claw.');
   }
 });
@@ -115,27 +32,52 @@ client.on('message', msg => {
 // https://discord.com/channels/738094866965331969/738094866965331974/777831599588245545 for later
 
 client.on('message', msg => {
-  if (msg.content === 'Alopex') {
+  if (msg.content === '$Alopex') {
     msg.reply('https://discord.com/channels/738094866965331969/738094866965331974/777831599588245545');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content === 'licence') {
+  if (msg.content === '$licence') {
     msg.reply('**You can read our licence here** https://github.com/AlopexTMNT/AlopexBot/blob/main/README.md *PS* its OPEN SOURCE');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content === 'kids') {
+  if (msg.content === '$kids') {
     msg.reply('https://discord.com/channels/738094866965331969/738094866965331974/778712214495297536');
   }
 });
 
 client.on('message', msg => {
-  if (msg.content === 'mutated') {
+  if (msg.content === '$mutated') {
     msg.reply('https://discord.com/channels/738094866965331969/738094866965331974/778712314575847425');
   }
+});
+
+client.on('message', message => {
+  if (message.content === '$serverip') {
+    msg.reply('onononon');
+  }
+});
+
+client.on('message', message => {
+  if (message.content === '$help') {
+    message.channel.send('Commands: **HELP** *for help* **serverip** *for my cool minecraft serever ip* **ping** *Ping* **mutated** *You Will see* **Alopex** *Secret* **Kids** *Same* **about** *About the bot* **user-info** *Get the info of your account (Other account features may come)*')
+  }
+});
+
+client.on('message', message => {
+  if (message.content === `$ping`) {
+    message.channel.send('Pong.');
+  } else if (message.content === `$beep`) {
+    message.channel.send('Boop.');
+  } else if (message.content === `$server`) {
+    message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
+  } else if (message.content === `$user-info`) {
+    message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}\nCreated at: ${message.author.createdAt}\nAvatar: ${message.author.avatarURL({format} = {})}`);
+  }
+
 });
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);
