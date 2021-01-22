@@ -290,13 +290,6 @@ client.on('message', message => {
     }
 })
 
-// If someone loves Dream send this message I love Dream
-client.on('message', message => {
-  if (message.content === 'I love Dream') {
-    message.channel.send('HA GAYYY')
-  }
-});
-
 // Best Rapper (Logic)
 client.on('message', message => {
   if (message.content === 'Best Rapper') {
