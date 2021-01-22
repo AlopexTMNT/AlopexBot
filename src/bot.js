@@ -548,4 +548,10 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+  if (message.content === 'song') {
+    message.channel.send('Join us now and share the software\nYou ll be free, hackers, you ll be free\nJoin us now and share the software\nYou ll be free, hackers, you ll be free\n Hoarders can get piles of money\nThat is true, hackers, that is true\nBut they cannot help their neightbors\nThats not good, hackers, thats not good\nWhen we have enought free software\nAt our call, hackers, at out call\nWe ll kick out those dirty licenses\n Even more, hackers, even more\nJoin us now and share the software\nYou ll be free, hackers, you ll be free\nJoin us now and share the software\n You ll be free, hackers, you ll be free')
+  }
+});
+
 client.login(process.env.DISCORDJS_BOT_TOKEN);
