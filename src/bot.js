@@ -11,7 +11,7 @@ const client = new Client({
 const PREFIX = "$";
 
 client.on('ready', () => {
-  console.log(`${client.user.tag} has logged in.`);
+  console.log(`${client.user.tag} is now online.`);
 });
 
 client.on('message', msg => {
@@ -639,5 +639,8 @@ client.on('message', message => {
   }
 });
 
+// ------------------------------------------------
+// Message session!
+// Pictures will not be added!
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);
