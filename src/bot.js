@@ -32,7 +32,7 @@ client.on('message', message => {
 
 client.on('message', msg => {
   if (msg.content === 'licence') {
-    msg.reply('**You can read our licence here** https://github.com/AlopexTMNT/AlopexBot/blob/main/README.md *PS* its OPEN SOURCE');
+    msg.reply('**You can read our licence here** https://github.com/AlopexTMNT/AlopexBot/blob/main/LICENSE *PS* its OPEN SOURCE');
   }
 });
 
@@ -52,7 +52,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === '$help') {
-    message.channel.send('Do Manual')
+    message.channel.send('Do $Manual')
   }
 });
 
@@ -632,7 +632,7 @@ client.on('message', message => {
 });
 // manual.docx
 client.on('message', message => {
-  if (message.content === 'Manual') {
+  if (message.content === '$Manual') {
     message.channel.send('**Alopex Command manual**')
     const attachment = new MessageAttachment('./txts/manual.docx');
     message.channel.send(attachment);
@@ -642,5 +642,7 @@ client.on('message', message => {
 // ------------------------------------------------
 // Message session!
 // Pictures will not be added!
+// Updated LICENCE
+// ------------------------------------------------
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);
