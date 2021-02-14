@@ -81,13 +81,6 @@ client.on('message', message => {
   }
 })
 
-//client.on('message', message => {
-//  if (message.content === 'Best picture of THE WORLD') {
-//    const attachment = new MessageAttachment('./pics/bpotw.png');
-//    message.channel.send(attachment);
-//  }
-//});
-
 client.on('message', message => {
   if (message.content === 'Dream') {
     message.channel.send('Dream is gay {hahaha} REEEEEEEEEEEEEEEEEEEEE')
