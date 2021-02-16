@@ -700,6 +700,11 @@ client.on('message', message => {
 		message.channel.send('Vim is the best terminal text editor. This message was writter in VIM')
   }
 });
+client.on('message', msg => {
+  if (msg.content === 'I love Alopex') {
+    msg.reply('OwO');
+  }
+});
 
 
 
