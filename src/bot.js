@@ -725,6 +725,16 @@ client.on('message', message => {
     message.channel.send('Alopex është një dhelpër e hollë mutante humane me sy të ngjashëm me macen, ndryshe nga shumica e dhelprave. Veshja e saj përbëhet nga një bandana me kokë vjollcë me një etiketë metalike në pjesën e përparme, një bandana e gjatë, e kuqe rreth qafës së saj, këmishë me dritë të purpurt, me mëngë të gjata me hapje rrjetë dhe një pjatë kafe në gjoks mbi të që shtrihet në të gjithë zonën e gjoksit të majtë dhe vrima të mëdha në mëngë, dhe pantallona të purpurta të errëta që gjithashtu kanë vrima të mëdha në këmbën e pantallonave. Rreth belit të saj është bishti i Tiger Claw që ajo mban si një trofe me rripa.')
   }
 });
+client.on('message', message => {
+  if (message.content === 'About Alopex RU') {
+    message.channel.send('Алопекс - стройная лиса-мутант-гуманоид с кошачьими глазами, в отличие от большинства лисиц. Ее наряд состоит из фиолетовой банданы на голове с металлической биркой спереди, длинной красной банданы на шее, светло-фиолетовой рубашки с длинным рукавом с сетчатым вырезом и коричневой нагрудной пластинки над ней, которая проходит через ее левую область груди. и большие дырочки на рукавах, и темно-фиолетовые штаны с большими дырочками на штанине. Вокруг ее талии - хвост Тигриного Когтя, который она носит в качестве трофея с поясом.')
+  }
+});
+client.on('message', message => {
+  if (message.content === 'About Alopex GE') {
+    message.channel.send('Alopex ist im Gegensatz zu den meisten Füchsen ein schlanker humanoider mutierter Fuchs mit katzenartigen Augen. Ihr Outfit besteht aus einem lila Kopftuch mit einem Metallschild auf der Vorderseite, einem langen, roten Kopftuch um den Hals, einem hellvioletten Langarmhemd mit Netzöffnung und einer braunen Brustplatte darüber, die sich über ihren linken Brustbereich erstreckt und große Löcher in den Ärmeln und dunkelviolette Hosen, die auch große Löcher im Hosenbein haben. Um ihre Taille liegt Tiger Claws Schwanz, den sie als Gürtel-Trophäe trägt.')
+  }
+});
 
 
 
