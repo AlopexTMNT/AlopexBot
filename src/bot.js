@@ -705,6 +705,26 @@ client.on('message', msg => {
     msg.reply('OwO');
   }
 });
+client.on('message', message => {
+  if (message.content === 'About Alopex EN') {
+    message.channel.send('Alopex is a slender humanoid mutant fox with cat-like eyes unlike most foxes. Her outfit consists of a purple head bandana with a metal tag on the front, a long, red bandana around her neck, light purple, long-sleeve shirt with net opening and a brown chest-plate over it that extends across her left breast area and large holes on the sleeves, and dark purple pants that also have large holes on the pant leg. Around her waist is Tiger Claws tail that she wears as a belted trophy. ')
+  }
+});
+client.on('message', message => {
+  if (message.content === 'About Alopex GR') {
+    message.channel.send('Η Alopex είναι μια λεπτή μεταλλαγμένη ανθρωποειδής αλεπού με μάτια που μοιάζουν με γάτα σε αντίθεση με τις περισσότερες αλεπούδες. Η στολή της αποτελείται από μωβ μαντήλι κεφαλής με μεταλλική ετικέτα στο μπροστινό μέρος, μακρύ, κόκκινο φουλάρι γύρω από το λαιμό της, ανοιχτό μοβ, μακρυμάνικο πουκάμισο με δίχτυ άνοιγμα και καφέ κασέτα πάνω από αυτό που εκτείνεται σε όλη την αριστερή περιοχή του μαστού και μεγάλες τρύπες στα μανίκια, και σκούρο μοβ παντελόνι που έχουν επίσης μεγάλες τρύπες στο πόδι του παντελονιού. Γύρω από τη μέση της είναι η ουρά του Tiger Claw που φορά ως τρόπαιο.')
+  }
+});
+client.on('message', message => {
+  if (message.content === 'About Alopex JP') {
+    message.channel.send('Alopexは、ほとんどのキツネとは異なり、猫のような目をした細い人型の変異キツネです。 彼女の服は、前面に金属タグが付いた紫色の頭のバンダナ、首に長い赤いバンダナ、ネットの開口部が付いた薄紫色の長袖シャツ、そして左胸の領域全体に広がる茶色の胸板で構成されています 袖には大きな穴があり、パンツの脚にも大きな穴がある濃い紫色のパンツ。 彼女の腰の周りには、ベルト付きのトロフィーとして身に着けているタイガークローの尻尾があります。')
+  }
+});
+client.on('message', message => {
+  if (message.content === 'About Alopex AL') {
+    message.channel.send('Alopex është një dhelpër e hollë mutante humane me sy të ngjashëm me macen, ndryshe nga shumica e dhelprave. Veshja e saj përbëhet nga një bandana me kokë vjollcë me një etiketë metalike në pjesën e përparme, një bandana e gjatë, e kuqe rreth qafës së saj, këmishë me dritë të purpurt, me mëngë të gjata me hapje rrjetë dhe një pjatë kafe në gjoks mbi të që shtrihet në të gjithë zonën e gjoksit të majtë dhe vrima të mëdha në mëngë, dhe pantallona të purpurta të errëta që gjithashtu kanë vrima të mëdha në këmbën e pantallonave. Rreth belit të saj është bishti i Tiger Claw që ajo mban si një trofe me rripa.')
+  }
+});
 
 
 
