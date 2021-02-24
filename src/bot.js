@@ -742,6 +742,7 @@ client.on('message', message => {
 // Message session!
 // Pictures will not be added!
 // Updated LICENCE
+// Added About Alopex in deferent languages! (More maybe added)
 // ------------------------------------------------
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);
