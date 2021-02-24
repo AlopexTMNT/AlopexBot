@@ -6,3 +6,4 @@ Pictures are NOT INCLUDED. Because it would be illegal not only for copyright is
 
 To do list: (Planned features)
 1. Level system
+2. Moderation tools
