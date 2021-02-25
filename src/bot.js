@@ -15,8 +15,6 @@ client.on('ready', () => {
 });
 
 
-// https://discord.com/channels/738094866965331969/738094866965331974/777831599588245545 for later
-
 
 client.on('message', message => {
   if (message.content === 'Alopex') {
