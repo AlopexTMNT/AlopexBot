@@ -14,11 +14,6 @@ client.on('ready', () => {
   console.log(`${client.user.tag} is now online.`);
 });
 
-client.on('message', msg => {
-  if (msg.content === 'who is alopex') {
-    msg.reply('Alopex is a Mutant Red Fox and she apeared in TMNT 2012 TV Series. Sister of Tiger Claw.');
-  }
-});
 
 // https://discord.com/channels/738094866965331969/738094866965331974/777831599588245545 for later
 
