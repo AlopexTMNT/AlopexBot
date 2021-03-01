@@ -14,6 +14,13 @@ client.on('ready', () => {
   console.log(`${client.user.tag} is now online.`);
 });
 
+client.on('message', msg => {
+  if (msg.content === 'who is alopex') {
+    msg.reply('Alopex is a Mutant Red Fox and she apeared in TMNT 2012 TV Series. Sister of Tiger Claw.');
+  }
+});
+
+// https://discord.com/channels/738094866965331969/738094866965331974/777831599588245545 for later
 
 
 client.on('message', message => {
@@ -55,7 +62,7 @@ client.on('message', message => {
   } else if (message.content === `$beep`) {
     message.channel.send('Boop.');
   } else if (message.content === `$server`) {
-    message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}`);
+    message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}\n Server Owner: ${message.guild.owner}\n Server Owner id: ${message.guild.ownerID}\n Server region: ${message.guild.region}`);
   } else if (message.content === `$user-info`) {
     message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}\nCreated at: ${message.author.createdAt}\nAvatar: ${message.author.avatarURL({format} = {})}`);
   }
@@ -735,7 +742,6 @@ client.on('message', message => {
 // Message session!
 // Pictures will not be added!
 // Updated LICENCE
-// Added About Alopex in deferent languages! (More maybe added)
 // ------------------------------------------------
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);
