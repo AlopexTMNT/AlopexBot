@@ -20,8 +20,6 @@ client.on('message', msg => {
   }
 });
 
-// https://discord.com/channels/738094866965331969/738094866965331974/777831599588245545 for later
-
 
 client.on('message', message => {
   if (message.content === 'Alopex') {
@@ -62,9 +60,9 @@ client.on('message', message => {
   } else if (message.content === `$beep`) {
     message.channel.send('Boop.');
   } else if (message.content === `$server`) {
-    message.channel.send(`Server name: ${message.guild.name}\nTotal members: ${message.guild.memberCount}\n Server Owner: ${message.guild.owner}\n Server Owner id: ${message.guild.ownerID}\n Server region: ${message.guild.region}`);
+    message.channel.send(`Stats for nerds:\n Server name: ${message.guild.name}\nServer Creation date: ${message.guild.createdAt}\nTotal members: ${message.guild.memberCount}\n Server Owner: ${message.guild.owner}\n Server Owner id: ${message.guild.ownerID}\n Server region: ${message.guild.region}\n Server Icon: ${message.guild.icon}\n Server afk channel: ${message.guild.afkChannel}`);
   } else if (message.content === `$user-info`) {
-    message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}\nCreated at: ${message.author.createdAt}\nAvatar: ${message.author.avatarURL({format} = {})}`);
+    message.channel.send(`Your username: ${message.author.username}\nYour ID: ${message.author.id}\nCreated at: ${message.author.createdAt}\nAvatar: ${message.author.avatarURL({format} = {})}\n System: ${message.author.system}`);
   }
 
 });
@@ -87,7 +85,7 @@ client.on('message', message => {
   }
 });
 
-//peos.bot
+
 
 client.on('message', message => {
   if (message.content === 'peos.bot') {
@@ -214,7 +212,7 @@ client.on('message', message => {
     message.channel.send(attachment);
   }
 });
-//mixahlsad2.png
+
 
 client.on('message', message => {
   if (message.content === 'Mixahl Sad 2') {
@@ -285,7 +283,7 @@ client.on('message', message => {
     }
 })
 
-// Best Rapper (Logic)
+
 client.on('message', message => {
   if (message.content === 'Best Rapper') {
     message.channel.send('Logic')
@@ -299,7 +297,7 @@ client.on('message', message => {
   }
 });
 
-// Haha no. Black lives do not matter. | TRUMP 2024 and /pol/ and /b/ of https://4chan.org
+
 client.on('message', message => {
   if (message.content === 'BLM') {
     message.channel.send('Haha no. Black lives do not matter. | TRUMP 2024 and /pol/ and /b/ of https://4chan.org')
@@ -458,7 +456,7 @@ client.on('message', message => {
   }
 });
 
-// tellstorypepe.png
+
 
 client.on('message', message => {
   if (message.content === 'Tell a story') {
@@ -467,7 +465,7 @@ client.on('message', message => {
   }
 });
 
-// nazipepekill.jpg
+
 
 client.on('message', message => {
   if (message.content === 'I will kill you') {
@@ -476,7 +474,7 @@ client.on('message', message => {
   }
 });
 
-// nazipepewcross
+
 
 client.on('message', message => {
   if (message.content === 'Nazi pepe') {
@@ -554,7 +552,7 @@ client.on('message', message => {
   }
 });
 
-// svisto.jpg
+
 client.on('message', message => {
   if (message.content === 'Svisto') {
     const attachment = new MessageAttachment('./pics/svisto.jpg');
@@ -562,7 +560,7 @@ client.on('message', message => {
   }
 });
 
-// const attachment = new MessageAttachment('./pics/stallman.jpeg');
+
 client.on('message', message => {
   if (message.content === 'Stallman') {
     message.channel.send('Lord Richard Stallman!')
@@ -622,11 +620,11 @@ client.on('message', message => {
     message.channel.send('SIMP!')
   }
 });
-// manual.docx
+
 client.on('message', message => {
   if (message.content === '$Manual') {
     message.channel.send('**Alopex Command manual**')
-    const attachment = new MessageAttachment('./txts/manual.docx');
+    const attachment = new MessageAttachment('./txts/manual.odt');
     message.channel.send(attachment);
   }
 });
@@ -684,12 +682,7 @@ client.on('message', message => {
     message.channel.send('jazz is good for coding they say but it never helped me :sad:')
   }
 });
-client.on('message', message => {
-  if (message.content === 'Gods') {
-    const attachment = new MessageAttachment('./pics/theotites.png');
-    message.channel.send(attachment);
-  }
-});
+
 client.on('message', message => {
   if (message.content === 'Fan-Fact1') {
     message.channel.send('Fan fact 1: The design for the Alopex character on the 2012 TV series in heavily based on the Naruto Anime, lead character designer says.')
@@ -733,6 +726,20 @@ client.on('message', message => {
 client.on('message', message => {
   if (message.content === 'About Alopex GE') {
     message.channel.send('Alopex ist im Gegensatz zu den meisten Füchsen ein schlanker humanoider mutierter Fuchs mit katzenartigen Augen. Ihr Outfit besteht aus einem lila Kopftuch mit einem Metallschild auf der Vorderseite, einem langen, roten Kopftuch um den Hals, einem hellvioletten Langarmhemd mit Netzöffnung und einer braunen Brustplatte darüber, die sich über ihren linken Brustbereich erstreckt und große Löcher in den Ärmeln und dunkelviolette Hosen, die auch große Löcher im Hosenbein haben. Um ihre Taille liegt Tiger Claws Schwanz, den sie als Gürtel-Trophäe trägt.')
+  }
+});
+
+client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+		if (!channel) return;
+			channel.send('Welcome to the server, ${member}');
+});
+
+client.on('message', message => {
+  if (message.content === 'Sexy') {
+    message.channel.send('Alopex is so sexy UwU')
+      const attachment = new MessageAttachment('./pics/alopex.png');
+    message.channel.send(attachment);
   }
 });
 
