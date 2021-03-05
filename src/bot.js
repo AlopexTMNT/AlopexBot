@@ -256,11 +256,6 @@ client.on('message', message => {
   }
 });
 
-client.on('message', message => {
-  if (message.content === 'server ip') {
-    message.channel.send('alopex.nitrado.net')
-  }
-});
 
 client.on('message', message => {
   if (message.content === 'Βαβούρας σεξ') {
@@ -729,17 +724,18 @@ client.on('message', message => {
   }
 });
 
-client.on('guildMemberAdd', member => {
-	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
-		if (!channel) return;
-			channel.send('Welcome to the server, ${member}');
-});
 
 client.on('message', message => {
   if (message.content === 'Sexy') {
     message.channel.send('Alopex is so sexy UwU')
       const attachment = new MessageAttachment('./pics/alopex.png');
     message.channel.send(attachment);
+  }
+});
+
+client.on('message', message => {
+  if (message.content === 'See you soon') {
+    message.channel.send('Sou ta elega Louka, See you soon')
   }
 });
 
