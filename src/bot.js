@@ -739,6 +739,12 @@ client.on('message', message => {
   }
 });
 
+client.on('message', message => {
+	if (message.content === 'Kali Linux') {
+		message.channel.send('Not recommended as a main driver. Good for a VM or boot from live cd.')
+	}
+})
+
 
 
 // ------------------------------------------------
