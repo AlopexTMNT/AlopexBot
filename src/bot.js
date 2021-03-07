@@ -740,6 +740,7 @@ client.on('message', message => {
 // Message session!
 // Pictures will not be added!
 // Updated LICENCE
+// Removed useless bloat (Usless lines)
 // ------------------------------------------------
 
 client.login(process.env.DISCORDJS_BOT_TOKEN);
