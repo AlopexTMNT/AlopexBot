@@ -8,8 +8,6 @@ const client = new Client({
 
 
 
-const PREFIX = "$";
-
 client.on('ready', () => {
   console.log(`${client.user.tag} is now online.`);
 });
@@ -86,12 +84,6 @@ client.on('message', message => {
 });
 
 
-
-client.on('message', message => {
-  if (message.content === 'peos.bot') {
-    message.channel.send('YOUR MOM SUCKS MY NIGGER ASS. Faggot')
-  }
-});
 
 client.on('message', message => {
   if (message.content === 'Sexy Teacher') {
@@ -672,11 +664,8 @@ client.on('message', message => {
     message.channel.send('https://drive.google.com/file/d/16WpBc5cxFpVnfosf6TD41YKjN9LGzHeG')
   }
 });
-client.on('message', message => {
-  if (message.content === 'Yanni') {
-    message.channel.send('jazz is good for coding they say but it never helped me :sad:')
-  }
-});
+
+
 
 client.on('message', message => {
   if (message.content === 'Fan-Fact1') {
