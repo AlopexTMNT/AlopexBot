@@ -48,7 +48,9 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === '$help') {
-    message.channel.send('Do $Manual')
+    message.channel.send('**Alopex Command manual** *$Manual does the same thing*')
+    const attachment = new MessageAttachment('./txts/manual.odt');
+    message.channel.send(attachment);
   }
 });
 
