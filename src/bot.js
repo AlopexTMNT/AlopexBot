@@ -69,7 +69,7 @@ client.on('message', message => {
 
 client.on('message', message => {
   if (message.content === '$invite') {
-    message.channel.send('https://discord.com/oauth2/authorize?client_id=778963300800397312&scope=bot')
+    message.channel.send('*Private bot sorry* :sad:')
   }
 });
 
